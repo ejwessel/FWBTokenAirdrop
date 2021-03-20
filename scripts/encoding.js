@@ -36,7 +36,7 @@ fs.readFile('./airdropdata.csv', async (err, data) => {
   const method = 'distribute(address,address[],uint256[])'
 
   // SET PAGE SIZE
-  const pageSize = 10
+  const pageSize = 125
   for (let i = 0; i < addresses.length; i += pageSize) {
     const batch = await airdropInterface.encodeFunctionData(
       method,
